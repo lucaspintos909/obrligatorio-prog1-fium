@@ -1,6 +1,9 @@
 
 class Desarrollador:
-    def __init__(self, ci: int, nombre: str, apellido: str, pais_origen: str, fecha_nacimiento: str, experiencia: int, rol: str ):
+    paises_permitidos = ["Argentina", "Brasil", "Chile", "Uruguay"]
+    roles_permitidos = ["Diseñador", "Productor", "Programador", "Tester"]
+
+    def __init__(self, ci: int, nombre: str, apellido: str, pais_origen: str, fecha_nacimiento: str, experiencia: int, rol: str ) -> None:
         self._ci = ci
         self._nombre = nombre
         self._apellido = apellido
