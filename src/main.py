@@ -1,20 +1,10 @@
 import utils.MenuUtils as MenuUtils
+from utils.menus import menu_principal
 
-opciones_menu = """
-------------------------------
-| Menú principal         - x |
-------------------------------
-|  1. Alta de desarrollador  |
-|  2. Alta de videojuego     |
-|  3. Simular competencia    |
-|  4. Realizar consultas     |
-|  5. Salir                  |
-------------------------------
-"""
 def menu():
     opcion = None
     while opcion != "5":
-        print(opciones_menu)
+        print(menu_principal)
         opcion = input("Opción: ")
         MenuUtils.limpiar_consola()
         match opcion:
