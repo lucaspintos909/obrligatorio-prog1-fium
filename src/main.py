@@ -1,4 +1,4 @@
-import utils.MenuUtils as MenuUtils
+from utils.menus import limpiar_consola
 from utils.menus import menu_principal
 
 def menu():
@@ -6,7 +6,7 @@ def menu():
     while opcion != "5":
         print(menu_principal)
         opcion = input("Opción: ")
-        MenuUtils.limpiar_consola()
+        limpiar_consola()
         match opcion:
             case "1":
                 print("Alta de desarrollador")
@@ -24,5 +24,5 @@ def menu():
                 print("Opción inválida, intente nuevamente.")
 
 
-MenuUtils.limpiar_consola()
+limpiar_consola()
 menu()
