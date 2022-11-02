@@ -2,6 +2,7 @@
 class Competencia:
 
     def __init__(self, categoria: str) -> None:
-        self.juegos: list = []
-        self.categoria: str = categoria
-        self.podio: list = []
+        self._juegos: list = []
+        self._categoria: str = categoria
+        self._podio: list = []
+        
