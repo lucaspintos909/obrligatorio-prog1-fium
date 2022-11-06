@@ -1,7 +1,9 @@
 from utils.menus import limpiar_consola, menu_alta_desarrollador
 from utils.menus import pedir_dato
+from exceptions import DatosInvalidos
 
 class Desarrollador:
+    # Esto lo pongo acá para tener una guía
     paises_permitidos = ["Argentina", "Brasil", "Chile", "Uruguay"]
     roles_permitidos = ["diseñador", "productor", "programador", "tester"]
 
@@ -19,9 +21,10 @@ class Desarrollador:
         return self._ci
 
     def ci_setter(self, ci):
-        if len(ci) != 8:
-            raise Exception("La cédula debe tener digito verificador y no debe tener puntos ni guiónes.")
-        self._ci = ci
+        mensaje_error = "La cedula ingresada es inválida, debe tener 8 digitos, incluyendo verificador y no debe tener puntos ni guiónes"
+        if len(ci) != 8 or not ci.isnumeric():
+            raise DatosInvalidos(mensaje_error)
+        self._ci = int(ci)
 
     @property
     def nombre(self):
@@ -51,4 +54,4 @@ class Desarrollador:
         limpiar_consola()
         print(menu_alta_desarrollador)
         string = "Ingrese cédula: "
-        pedir_dato(self.ci_setter, )
+        pedir_dato(self.ci_setter, "Ingrese cédula (sin puntos ni guiónes): ")
