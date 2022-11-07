@@ -11,13 +11,15 @@ def limpiar_consola():
 def pedir_dato(setter, string_input: str):
     dato_ok = False
     while not dato_ok:
-        dato_ingresado = input(f"|  {string_input}")
+        # Pido el dato
+        dato_ingresado = input(f"\n  {string_input} ")
         try:
+            # Uso el setter, y si se guarda correctamente borro los errores
             setter(dato_ingresado)
             dato_ok = True
-            
+            limpiar_consola()
+
         except Exception as error:
-            print(f"|  ***** ")
-            print(f"|  ERROR: {error}, intente nuevamente.")
-            print(f"|  ***** ")
-            print(f"|  ")
+            print(f"\n  ***** ")
+            print(f"  ERROR: {error}, intente nuevamente.")
+            print(f"  ***** ")
