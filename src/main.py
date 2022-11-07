@@ -1,6 +1,9 @@
 from utils.menus import limpiar_consola
 from utils.menus import menu_principal
 
+# Clases
+from entities import Desarrollador
+
 def menu():
     opcion = None
     while opcion != "5":
@@ -9,7 +12,8 @@ def menu():
         limpiar_consola()
         match opcion:
             case "1":
-                print("Alta de desarrollador")
+                desarrollador = Desarrollador()
+                desarrollador.menu_de_alta()
             case "2":
                 print("Alta de videojuego")
             case "3":
