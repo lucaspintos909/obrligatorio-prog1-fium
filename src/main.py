@@ -3,6 +3,7 @@ from utils.menus.Menus import menu_principal
 
 # Clases
 from entities.Desarrollador import Desarrollador
+from entities.Videojuego import Videojuego
 
 def menu():
     opcion = None
@@ -15,7 +16,8 @@ def menu():
                 desarrollador = Desarrollador()
                 desarrollador.menu_de_alta()
             case "2":
-                print("Alta de videojuego")
+                videojuego = Videojuego()
+                videojuego.menu_de_alta()
             case "3":
                 print("Simular competencia")
             case "4":
