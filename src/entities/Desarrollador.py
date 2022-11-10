@@ -1,7 +1,7 @@
 from datetime import date, timedelta
-from utils.menus import limpiar_consola, menu_alta_desarrollador
-from utils.menus import pedir_dato
-from exceptions import DatosInvalidos
+from utils.menus.MenuUtils import pedir_dato
+from utils.menus.Menus import menu_alta_desarrollador
+from exceptions.DatosInvalidos import DatosInvalidos
 
 
 class Desarrollador:

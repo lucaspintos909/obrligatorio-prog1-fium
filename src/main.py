@@ -1,8 +1,8 @@
-from utils.menus import limpiar_consola
-from utils.menus import menu_principal
+from utils.menus.MenuUtils import limpiar_consola
+from utils.menus.Menus import menu_principal
 
 # Clases
-from entities import Desarrollador
+from entities.Desarrollador import Desarrollador
 
 def menu():
     opcion = None
@@ -21,7 +21,7 @@ def menu():
             case "4":
                 print("Realizar consultas")
             case "5":
-                input("Presione la tecla enter para salir...")
+                input("Presione enter para salir...")
                 print("Chau!")
                 exit()
             case cualquier_otro:
@@ -29,4 +29,8 @@ def menu():
 
 
 limpiar_consola()
-menu()
+try:
+    menu()
+except KeyboardInterrupt:
+    print("\n\nChau!")
+    exit()
