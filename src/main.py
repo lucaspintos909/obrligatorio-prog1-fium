@@ -5,6 +5,11 @@ from utils.menus.Menus import menu_principal
 from entities.Desarrollador import Desarrollador
 from entities.Videojuego import Videojuego
 
+# Datos de ejemplos 
+from datos_ejemplo import desarrolladores_prueba
+
+desarrolladores = desarrolladores_prueba
+
 def menu():
     opcion = None
     while opcion != "5":
@@ -15,9 +20,10 @@ def menu():
             case "1":
                 desarrollador = Desarrollador()
                 desarrollador.menu_de_alta()
+                desarrolladores.append(desarrollador)
             case "2":
                 videojuego = Videojuego()
-                videojuego.menu_de_alta()
+                videojuego.menu_de_alta(desarrolladores)
             case "3":
                 print("Simular competencia")
             case "4":
