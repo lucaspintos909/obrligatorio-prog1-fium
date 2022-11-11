@@ -8,14 +8,17 @@ def limpiar_consola():
     else:
         system('clear')
 
-def pedir_dato(setter, string_input: str):
+def pedir_dato(setter, string_input: str, *args):
     dato_ok = False
     while not dato_ok:
         # Pido el dato
         dato_ingresado = input(f"\n  {string_input} ")
         try:
             # Uso el setter, y si se guarda correctamente borro los errores
-            setter(dato_ingresado)
+            if len(args) > 0:
+                setter(dato_ingresado, args[0])
+            else:
+                setter(dato_ingresado)
             dato_ok = True
             limpiar_consola()
 
