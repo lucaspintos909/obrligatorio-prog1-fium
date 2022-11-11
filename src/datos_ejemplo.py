@@ -65,6 +65,36 @@ programador_3.validar_y_guardar_fecha_nacimiento("10/02/1998")
 programador_3.validar_y_guardar_experiencia("4")
 programador_3.validar_y_guardar_rol("3")
 
+# Programador 3
+programador_4 = Desarrollador()
+programador_4.validar_y_guardar_ci("52650714")
+programador_4.validar_y_guardar_nombre("Lpintos")
+programador_4.validar_y_guardar_apellido("Lpintos")
+programador_4.validar_y_guardar_pais_origen("2")
+programador_4.validar_y_guardar_fecha_nacimiento("06/12/2002")
+programador_4.validar_y_guardar_experiencia("7")
+programador_4.validar_y_guardar_rol("3")
+
+# Programador 3
+programador_5 = Desarrollador()
+programador_5.validar_y_guardar_ci("52650711")
+programador_5.validar_y_guardar_nombre("Lmateo")
+programador_5.validar_y_guardar_apellido("Lmateo")
+programador_5.validar_y_guardar_pais_origen("1")
+programador_5.validar_y_guardar_fecha_nacimiento("07/12/2001")
+programador_5.validar_y_guardar_experiencia("6")
+programador_5.validar_y_guardar_rol("3")
+
+# Programador 3
+programador_6 = Desarrollador()
+programador_6.validar_y_guardar_ci("52650715")
+programador_6.validar_y_guardar_nombre("Libanes")
+programador_6.validar_y_guardar_apellido("Libanes")
+programador_6.validar_y_guardar_pais_origen("3")
+programador_6.validar_y_guardar_fecha_nacimiento("08/12/2002")
+programador_6.validar_y_guardar_experiencia("9")
+programador_6.validar_y_guardar_rol("3")
+
 
 # Tester 1
 tester_1 = Desarrollador()
@@ -86,5 +116,16 @@ tester_2.validar_y_guardar_fecha_nacimiento("10/02/2001")
 tester_2.validar_y_guardar_experiencia("3")
 tester_2.validar_y_guardar_rol("4")
 
+
+# Tester 2
+tester_3 = Desarrollador()
+tester_3.validar_y_guardar_ci("37876566")
+tester_3.validar_y_guardar_nombre("Ramiro")
+tester_3.validar_y_guardar_apellido("Pepe")
+tester_3.validar_y_guardar_pais_origen("2")
+tester_3.validar_y_guardar_fecha_nacimiento("11/02/2001")
+tester_3.validar_y_guardar_experiencia("1")
+tester_3.validar_y_guardar_rol("4")
+
 desarrolladores_prueba = [disenador_1, disenador_2, productor,
-                          programador_1, programador_2, programador_3, tester_1, tester_2]
+                          programador_1, programador_2, programador_3, programador_4, programador_5, programador_6, tester_1, tester_2, tester_3]
