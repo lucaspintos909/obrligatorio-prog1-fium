@@ -14,14 +14,16 @@ def pedir_dato(setter, string_input: str, *args):
         # Pido el dato
         dato_ingresado = input(f"\n  {string_input} ")
         try:
+            resultado = None
             # Uso el setter, y si se guarda correctamente borro los errores
             if len(args) > 0:
-                setter(dato_ingresado, args[0])
+                resultado = setter(dato_ingresado, args[0])
             else:
-                setter(dato_ingresado)
+                resultado = setter(dato_ingresado)
             dato_ok = True
             limpiar_consola()
-
+            
+            return resultado
         except Exception as error:
             print(f"\n  ***** ")
             print(f"  ERROR: {error}, intente nuevamente.")
