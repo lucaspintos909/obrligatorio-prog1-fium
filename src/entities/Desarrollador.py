@@ -20,6 +20,7 @@ class Desarrollador:
         self._edad: int = None
         self._experiencia: int = None
         self._rol: str = None
+        self._asignado: bool = False
 
     @property
     def ci(self):
@@ -155,6 +156,10 @@ class Desarrollador:
         if not rol:
             raise DatosInvalidos(mensaje_error)
         self._rol = int(rol_ingresado)
+
+    @property
+    def asignado(self):
+        return self._asignado
 
     def menu_de_alta(self):
         menu = menu_alta_desarrollador
