@@ -22,13 +22,13 @@ menu_alta_videojuego = """
 ---------------------------------------
 """
 
-simular_competencia = """
+menu_simular_competencia = """
 ---------------------------------------
 | > Simular competencia           - x |
 ---------------------------------------
 """
 
-realizar_consultas = """
+menu_realizar_consultas = """
 ---------------------------------------
 | > Relizar consultas             - x |
 ---------------------------------------
