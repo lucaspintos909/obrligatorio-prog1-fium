@@ -160,6 +160,13 @@ class Desarrollador:
     @property
     def asignado(self):
         return self._asignado
+    
+    @asignado.setter
+    def asignado(self, asignado):
+        self._asignado = asignado
+    
+    def __str__(self):
+        return f"{self.ci} - {self.nombre} {self.apellido} - {self.rol}"
 
     def menu_de_alta(self):
         menu = menu_alta_desarrollador
