@@ -166,8 +166,8 @@ class Desarrollador:
         self._asignado = asignado
     
     def __str__(self):
-        return f"{self.ci} - {self.nombre} {self.apellido} - {self.rol}"
-
+        return f"{self.nombre} {self.apellido} - {self.ci} - {self.rol}"
+        
     def menu_de_alta(self):
         menu = menu_alta_desarrollador
 
