@@ -8,7 +8,7 @@ disenador_1.validar_y_guardar_nombre("Lucas")
 disenador_1.validar_y_guardar_apellido("Pintos")
 disenador_1.validar_y_guardar_pais_origen("4")
 disenador_1.validar_y_guardar_fecha_nacimiento("14/05/2000")
-disenador_1.validar_y_guardar_experiencia("2")
+disenador_1.validar_y_guardar_experiencia("1")
 disenador_1.validar_y_guardar_rol("1")
 
 # Diseñador 2
