@@ -61,22 +61,39 @@ class Videojuego:
     @property
     def desarrolladores(self):
         return self._desarrolladores
+    
+    def validar_y_guardar_desarrollador(self, cedula_desarrollador_ingresado: str, desarrolladores: list) -> bool:
+        mensaje_error = "La cedula del desarrollador ingresada es inválida, debe tener 8 digitos, incluyendo verificador y no debe tener puntos ni guiónes"
+        
+        if len(cedula_desarrollador_ingresado) != 8 or not cedula_desarrollador_ingresado.isnumeric():
+            raise DatosInvalidos(mensaje_error)
+        
+        for dev in desarrolladores:
+            if dev.ci == int(cedula_desarrollador_ingresado) and not dev.asignado:
+                pass
 
-    def menu_de_alta(self):
+    def menu_de_alta(self, desarrolladores: list):
         menu = menu_alta_videojuego
 
         """ Nombre """
-        print(menu)
+        """ print(menu)
         string_nombre = "Ingrese nombre del videojuego:"
         pedir_dato(self.validar_y_guardar_nombre, string_nombre)
-        menu = f"{menu}\n|  Nombre: {self.nombre}"
+        menu = f"{menu}\n|  Nombre: {self.nombre}" """
         
         """ Categorias """
-        print(menu)
+        """ print(menu)
         string_categorias = "Ingrese categoría/s del videojuego (si es mas de una, se separa por comas, ej: 1,2,3,4) \n  "
         string_categorias += "\n  ".join([f"{categoria[0]} - {categoria[1]}" for categoria in self.posibles_categorias])
         string_categorias += "\n\n  Opción:"
         pedir_dato(self.validar_y_guardar_categorias, string_categorias)
-        menu = f"{menu}\n|  Categoría/s: {self.categorias}"
+        menu = f"{menu}\n|  Categoría/s: {self.categorias}" """
         
+        """ Desarrolladores """
+        print(menu)
+        string_desarrollador = "Ingrese la cédula del desarrollador, debe ingresar como mínimo 2 diseñadores, 1 productor, 3 programadores y 2 tester (ingrese 0 para dejar de agregar):"
+        pedir_dato(self.validar_y_guardar_desarrollador, string_desarrollador, desarrolladores)
+        menu = f"{menu}\n|  Desarrolladores: {self.desarrolladores[0].nombre}"
+
+
         print(menu)
