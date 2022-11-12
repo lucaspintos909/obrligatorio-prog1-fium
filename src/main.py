@@ -6,12 +6,10 @@ from entities.Desarrollador import Desarrollador
 from entities.Videojuego import Videojuego
 from entities.Competencia import Competencia
 
-# Datos de ejemplos 
-from datos_ejemplo import desarrolladores_prueba
+from persistencia.Persistencia import guardar_desarrolladores, cargar_desarrolladores
 
 competencia = Competencia()
-competencia.desarrolladores = desarrolladores_prueba
-
+competencia.desarrolladores = cargar_desarrolladores()
 
 def menu():
     opcion = None
@@ -30,7 +28,8 @@ def menu():
                 competencia.videojuegos +=  [videojuego]
                 
             case "3":
-                print("Simular competencia")
+                competencia.menu_simulacion()
+
             case "4":
                 devs = competencia.desarrolladores.copy()
                 """ def por_exp(dev):
@@ -57,9 +56,7 @@ def menu():
 
                 print(dict_gato)
             case "5":
-                input("Presione enter para salir...")
-                print("Chau!")
-                exit()
+                raise KeyboardInterrupt()
             case cualquier_otro:
                 print("Opción inválida, intente nuevamente.")
 
@@ -68,5 +65,7 @@ limpiar_consola()
 try:
     menu()
 except KeyboardInterrupt:
+    guardar_desarrolladores(competencia.desarrolladores)
     print("\n\nChau!")
+    
     exit()
