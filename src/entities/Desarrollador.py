@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from utils.menus.MenuUtils import pedir_dato
 from utils.menus.Menus import menu_alta_desarrollador
 from exceptions.DatosInvalidos import DatosInvalidos
@@ -160,14 +160,28 @@ class Desarrollador:
     @property
     def asignado(self):
         return self._asignado
-    
+
     @asignado.setter
     def asignado(self, asignado):
         self._asignado = asignado
-    
+
     def __str__(self):
         return f"{self.nombre} {self.apellido} - {self.ci} - {self.rol}"
-        
+
+    def obtener_dict(self):
+        return {'ci': self._ci, 'nombre': self._nombre, 'apellido': self._apellido, 'pais_origen': self._pais_origen, 'fecha_nacimiento': self._fecha_nacimiento, 'experiencia': self._experiencia, 'rol': self._rol, 'asignado': self._asignado}
+
+    def cargar_desde_dict(self, dev_dict):
+        self._ci = int(dev_dict["ci"])
+        self._nombre = dev_dict["nombre"]
+        self._apellido = dev_dict["apellido"]
+        self._pais_origen = int(dev_dict["pais_origen"])
+        self._fecha_nacimiento = datetime.strptime(
+            dev_dict["fecha_nacimiento"], '%Y-%m-%d').date()
+        self._experiencia = int(dev_dict["experiencia"])
+        self._rol = int(dev_dict["rol"])
+        self._asignado = dev_dict["asignado"] == "True"
+
     def menu_de_alta(self):
         menu = menu_alta_desarrollador
 
