@@ -66,7 +66,7 @@ class Videojuego:
     def validar_y_guardar_desarrollador(self, cedula_desarrollador_ingresado: str, desarrolladores: list) -> bool:
         mensaje_error = "La cedula del desarrollador ingresada es inválida, debe tener 8 digitos, incluyendo verificador y no debe tener puntos ni guiónes"
         if cedula_desarrollador_ingresado == "0":
-            if self.composicion_ok():
+            if self.verificar_composicion():
                 return -1
             else:
                 raise DatosInvalidos("La composicion del equipo no está completa, debe ingresar como mínimo 2 diseñadores, 1 productor, 3 programadores y 2 tester")
@@ -94,7 +94,7 @@ class Videojuego:
         dev_encontrado.asignado = True
         self._desarrolladores.append(dev_encontrado)
 
-    def composicion_ok(self):
+    def verificar_composicion(self) -> bool:
         contador_devs_rol = {
             "Diseñador": 0,
             "Productor": 0,
@@ -112,6 +112,26 @@ class Videojuego:
             roles_ok = False
 
         return roles_ok
+
+    def obtener_dict(self):
+        # Creo una lista de ci de los desarrolladores 
+        lista_ci_devs = list(map(lambda dev: str(dev.ci), self._desarrolladores))
+        lista_categorias = list(map(lambda cate: str(cate), self._categorias))
+        return {
+            "nombre": self._nombre,
+            "categorias": "-".join(lista_categorias),
+            "desarrolladores": "-".join(lista_ci_devs)
+        }
+
+    def cargar_desde_dict(self, videojuego: dict, desarrolladores: list):
+        self._nombre = videojuego["nombre"]
+        # Las categorias vienen de la forma "1-2-3", por eso le hago split por "-"
+        self._categorias = list(map(lambda cate: int(cate), videojuego["categorias"].split("-")))
+        # Los desarrolladores vienen de la forma "52650714-12345678-87654321", por eso le hago split por "-"
+        ci_devs = videojuego["desarrolladores"].split("-")
+        for ci in ci_devs:
+            # Filtro los desarrolladores generales por ci y se lo agrego a desarrolladores
+            self._desarrolladores += list(filter(lambda dev: dev.ci == int(ci), desarrolladores))
 
     def menu_de_alta(self, desarrolladores: list):
         menu = menu_alta_videojuego
