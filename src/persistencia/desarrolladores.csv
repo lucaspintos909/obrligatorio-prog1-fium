@@ -1,0 +1,14 @@
+ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
+54196160,Lucas,Pintos,4,2000-05-14,1,1,False
+58493850,Gonzalo,Perez,2,2001-05-14,4,1,False
+33759488,Cinthya,Belvisi,2,2001-10-14,4,2,False
+35748294,Jorge,Pintos,4,2001-08-21,4,3,False
+31365748,Santiago,Ramirez,1,1997-02-28,8,3,False
+38758491,Gustavo,Mendez,3,1998-02-10,4,3,False
+52650714,Lpintos,Lpintos,2,2002-12-06,7,3,False
+52650711,Lmateo,Lmateo,1,2001-12-07,6,3,False
+52650715,Libanes,Libanes,3,2002-12-08,9,3,False
+37489389,Luciano,Alcaeida,1,2001-02-10,3,4,False
+37876568,Ramiro,Hernandez,2,2001-02-10,3,4,False
+37876566,Ramiro,Pepe,2,2001-02-11,1,4,False
+52650767,Tomas,Munoz,4,2003-11-18,10,3,False
