@@ -69,8 +69,9 @@ class Videojuego:
             if self.verificar_composicion():
                 return -1
             else:
-                raise DatosInvalidos("La composicion del equipo no está completa, debe ingresar como mínimo 2 diseñadores, 1 productor, 3 programadores y 2 tester")
-                
+                raise DatosInvalidos(
+                    "La composicion del equipo no está completa, debe ingresar como mínimo 2 diseñadores, 1 productor, 3 programadores y 2 tester")
+
         if len(cedula_desarrollador_ingresado) != 8 or not cedula_desarrollador_ingresado.isnumeric():
             raise DatosInvalidos(mensaje_error)
 
@@ -114,8 +115,9 @@ class Videojuego:
         return roles_ok
 
     def obtener_dict(self):
-        # Creo una lista de ci de los desarrolladores 
-        lista_ci_devs = list(map(lambda dev: str(dev.ci), self._desarrolladores))
+        # Creo una lista de ci de los desarrolladores
+        lista_ci_devs = list(
+            map(lambda dev: str(dev.ci), self._desarrolladores))
         lista_categorias = list(map(lambda cate: str(cate), self._categorias))
         return {
             "nombre": self._nombre,
@@ -126,12 +128,24 @@ class Videojuego:
     def cargar_desde_dict(self, videojuego: dict, desarrolladores: list):
         self._nombre = videojuego["nombre"]
         # Las categorias vienen de la forma "1-2-3", por eso le hago split por "-"
-        self._categorias = list(map(lambda cate: int(cate), videojuego["categorias"].split("-")))
+        self._categorias = list(map(lambda cate: int(
+            cate), videojuego["categorias"].split("-")))
         # Los desarrolladores vienen de la forma "52650714-12345678-87654321", por eso le hago split por "-"
         ci_devs = videojuego["desarrolladores"].split("-")
         for ci in ci_devs:
             # Filtro los desarrolladores generales por ci y se lo agrego a desarrolladores
-            self._desarrolladores += list(filter(lambda dev: dev.ci == int(ci), desarrolladores))
+            self._desarrolladores += list(filter(lambda dev: dev.ci ==
+                                          int(ci), desarrolladores))
+
+    def obtener_devs_por_rol(self, rol: str) -> str:
+        return list(filter(lambda dev: dev.rol == rol, self.desarrolladores))
+
+    def obtener_promedio_experiencia_por_rol(self, rol: str) -> int:
+        devs_rol = self.obtener_devs_por_rol(rol)
+        suma_experiencia = 0
+        for dev in devs_rol:
+            suma_experiencia += dev.experiencia
+        return suma_experiencia / len(devs_rol)
 
     def menu_de_alta(self, desarrolladores: list):
         menu = menu_alta_videojuego
@@ -145,7 +159,8 @@ class Videojuego:
         """ Categorias """
         print(menu)
         string_categorias = "Ingrese categoría/s del videojuego (si es mas de una, se separa por comas, ej: 1,2,3,4) \n  "
-        string_categorias += "\n  ".join([f"{categoria[0]} - {categoria[1]}" for categoria in self.posibles_categorias])
+        string_categorias += "\n  ".join(
+            [f"{categoria[0]} - {categoria[1]}" for categoria in self.posibles_categorias])
         string_categorias += "\n\n  Opción:"
         pedir_dato(self.validar_y_guardar_categorias, string_categorias)
         menu = f"{menu}\n|  Categoría/s: {self.categorias}"
