@@ -9,7 +9,7 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 26922232,Rafa,Troy,3,1998-08-04,7,1,True
 35820088,Kettie,Hodgets,3,1999-05-06,5,1,True
 50211110,Cedric,Krol,2,1996-08-20,9,1,True
-46234674,Ozzie,Cleall,1,1990-08-31,7,1,True
+46234674,Ozzie,Cleall,1,1992-08-31,7,1,True
 53738714,Cordey,Moggle,1,1992-03-07,9,1,True
 55426620,Waldo,Mocker,1,1997-02-07,7,1,True
 27488796,Harley,Tingey,3,1991-04-19,10,1,True
@@ -39,7 +39,7 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 31439804,Gayler,Duncan,4,1991-06-01,4,1,False
 50668400,Aurelie,Viollet,3,1994-05-07,10,1,False
 17856040,Carmine,Vineall,4,2001-10-13,10,1,False
-19797470,Davie,Conrath,2,1990-04-25,9,2,True
+19797470,Davie,Conrath,2,1993-04-25,9,2,True
 30224930,Tessy,Cockson,4,1991-03-29,8,2,True
 28724598,Lilah,Dallaway,4,1999-12-04,10,2,True
 42359001,Martyn,Mabb,1,1993-03-04,1,2,True
@@ -59,7 +59,7 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 24424321,Shawn,Bagnal,1,1995-03-18,7,2,False
 37445581,Malva,Mewes,4,1993-01-14,3,2,False
 18129055,Berne,Reynault,4,2000-07-11,7,2,False
-29650386,Lilly,Feld,2,1998-12-27,10,3,True
+29650386,Lilly,Feld,2,1998-12-27,5,3,True
 51307889,Shane,Danes,2,1996-09-15,7,3,True
 21363769,Catharina,Managh,3,1994-10-03,8,3,True
 15961281,Angelico,Pavlasek,2,1997-06-24,9,3,True
@@ -67,12 +67,12 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 41555918,Ky,Temprell,1,1991-04-25,7,3,True
 24823854,Gretal,Yurlov,3,1996-01-14,1,3,True
 16227937,Kleon,Trebble,4,1994-02-06,7,3,True
-13012034,Britte,Devil,4,1992-07-22,10,3,True
+13012034,Britte,Devil,4,1992-07-22,4,3,True
 38818619,Kristian,Pryke,2,1992-05-02,2,3,True
 47308532,Tedie,Papierz,2,1991-09-16,5,3,True
 33129703,Jacobo,MacMearty,2,2001-09-09,1,3,True
 25125171,Mackenzie,Botly,3,1993-01-16,2,3,True
-43091185,Borg,Crannage,3,1994-03-05,10,3,True
+43091185,Borg,Crannage,3,1994-03-05,6,3,True
 29293030,Bastien,Brogiotti,3,2000-01-15,8,3,True
 50904193,Sibyl,Fraschini,2,2001-09-09,2,3,True
 40790208,Parrnell,Tuberfield,2,1992-07-03,6,3,True
@@ -97,11 +97,11 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 41555343,Sigismond,Mitie,3,2001-04-17,1,3,False
 12668021,Glyn,MacGettigen,4,1995-08-16,3,3,False
 44941058,Powell,Leinweber,4,1995-07-18,6,3,False
-42241636,Keeley,Cheavin,1,1992-05-27,10,3,False
+42241636,Keeley,Cheavin,1,1992-05-27,1,3,False
 20252492,Nicko,Gregoretti,4,1999-11-27,1,3,False
 54380944,Moria,Teissier,4,1994-12-31,7,3,False
-14133803,Vilma,Vittel,1,1996-10-14,10,3,False
-13849616,Cori,Yukhnov,2,1990-06-27,8,3,False
+14133803,Vilma,Vittel,1,1996-10-14,2,3,False
+13849616,Cori,Yukhnov,2,1993-06-27,8,3,False
 23134672,Trudi,Watters,4,1996-07-04,4,3,False
 12630622,Lotti,Finney,2,1997-09-08,4,3,False
 39656545,Gayler,Bess,4,1991-08-22,8,3,False
@@ -110,14 +110,14 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 37126455,Abdul,Spellworth,4,1996-09-05,2,3,False
 44200176,Wilt,Tellesson,3,1997-03-05,10,3,False
 49575324,Stella,McMeanma,2,1999-05-19,5,4,True
-33459618,Aindrea,Kulis,1,1990-06-07,7,4,True
+33459618,Aindrea,Kulis,1,1996-06-07,7,4,True
 47919779,Pearl,Gaine of England,4,1992-07-14,10,4,True
 54246598,Perrine,Habercham,1,1993-02-28,3,4,True
 48163896,Shela,Skarr,3,1993-11-05,7,4,True
 43283888,Virgie,Hawson,1,1999-01-12,9,4,True
 45376647,Bren,Harlow,4,1993-12-24,7,4,True
 22996945,Ira,Jeremiah,2,1998-12-02,4,4,True
-50302163,Lammond,Belliveau,2,1990-09-06,8,4,True
+50302163,Lammond,Belliveau,2,1996-09-06,8,4,True
 43141776,Erasmus,MacCallester,2,1996-11-07,2,4,True
 20989179,Lilah,Georgeot,3,1995-01-16,6,4,True
 46456356,Rock,Hast,1,1996-04-01,5,4,True
@@ -129,7 +129,7 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 31169915,Erika,Fasey,4,1999-08-29,9,4,True
 27992078,Adelbert,Waggatt,1,1998-02-08,1,4,False
 13667595,Carilyn,Insall,3,1997-05-04,3,4,False
-32015942,Ardath,Cantu,3,1990-02-23,9,4,False
+32015942,Ardath,Cantu,3,1991-02-23,9,4,False
 18759418,Porty,Cradock,2,1997-09-15,6,4,False
 29883802,Yorke,Bend,2,1998-04-05,8,4,False
 37615316,Pru,Seddon,3,1994-02-24,8,4,False
@@ -144,8 +144,8 @@ ci,nombre,apellido,pais_origen,fecha_nacimiento,experiencia,rol,asignado
 45658930,Rycca,Order,1,1993-11-01,2,4,False
 44597029,Raffarty,Drury,4,1993-04-13,9,4,False
 12985678,Tris,McGirr,3,1998-03-04,2,4,False
-16904247,Ortensia,Arnaldo,4,1990-01-27,6,4,False
-43083353,Felice,Christmas,2,1990-08-07,1,4,False
+16904247,Ortensia,Arnaldo,4,1991-01-27,6,4,False
+43083353,Felice,Christmas,2,1991-08-07,1,4,False
 16756866,Bobbi,Endricci,3,1999-10-01,9,4,False
 27741921,Horace,Suddards,4,1999-09-01,10,4,False
-15723792,Kiersten,Jaszczak,1,1990-01-07,1,4,False
+15723792,Kiersten,Jaszczak,1,1992-01-07,1,4,False
