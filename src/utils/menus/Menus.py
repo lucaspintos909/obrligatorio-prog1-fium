@@ -29,7 +29,13 @@ menu_simular_competencia = """
 """
 
 menu_realizar_consultas = """
----------------------------------------
-| > Relizar consultas             - x |
----------------------------------------
+--------------------------------------------------------------------------------------------
+| > Relizar consultas                                                                  - x |
+--------------------------------------------------------------------------------------------
+|  1. 10 mejores desarrolladores registrados (basados en años de desarrollo)               |
+|  2. 5 mejores desarrolladores con el rol de Programador (basados en años de desarrollo)  |
+|  3. 7 desarrolladores registrados con edad más avanzada                                  |
+|  4. Videojuego con más desarrolladores que provienen de Uruguay                          |
+|  5. Volver                                                                               |
+--------------------------------------------------------------------------------------------
 """
