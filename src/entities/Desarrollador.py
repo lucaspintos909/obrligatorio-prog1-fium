@@ -38,7 +38,7 @@ class Desarrollador:
 
     def validar_y_guardar_nombre(self, nombre: str):
         mensaje_error = "El nombre ingresado es inválido, debe tener entre 3 y 100 carácteres"
-        if type(nombre) is not str or len(nombre) < 3 or len(nombre) > 100:
+        if type(nombre) is not str or not nombre.isalpha() or len(nombre) < 3 or len(nombre) > 100:
             raise DatosInvalidos(mensaje_error)
         self._nombre = nombre
 
@@ -48,7 +48,7 @@ class Desarrollador:
 
     def validar_y_guardar_apellido(self, apellido: str):
         mensaje_error = "El apellido ingresado es inválido, debe tener entre 3 y 100 carácteres"
-        if type(apellido) is not str or len(apellido) < 3 or len(apellido) > 100:
+        if type(apellido) is not str or not apellido.isalpha() or len(apellido) < 3 or len(apellido) > 100:
             raise DatosInvalidos(mensaje_error)
         self._apellido = apellido
 
